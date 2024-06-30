@@ -1,0 +1,21 @@
+{
+  "name": "musica",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "**Musica** is a project that aims to parse and play WAV files using a web development component written in Rust and an Arduino setup for playing WAV files.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist pkg && webpack",
+    "start": "rimraf dist pkg && webpack-dev-server --open",
+    "test": "cd wave-parser; cargo test && wasm-pack test --headless"
+  },
+  "author": "Avinash Verma",
+  "license": "ISC",
+  "devDependencies": {
+    "@wasm-tool/wasm-pack-plugin": "^1.7.0",
+    "rimraf": "^5.0.7",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
