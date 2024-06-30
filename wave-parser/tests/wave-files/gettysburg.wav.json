@@ -1,0 +1,14 @@
+{
+  "format": {
+    "filename": "./wave-files/gettysburg.wav",
+    "nb_streams": 1,
+    "nb_programs": 0,
+    "nb_stream_groups": 0,
+    "format_name": "wav",
+    "format_long_name": "WAV / WAVE (Waveform Audio)",
+    "duration": "17.577052",
+    "size": "775192",
+    "bit_rate": "352820",
+    "probe_score": 99
+  }
+}

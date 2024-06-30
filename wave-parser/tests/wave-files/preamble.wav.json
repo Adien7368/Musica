@@ -1,0 +1,14 @@
+{
+  "format": {
+    "filename": "./wave-files/preamble.wav",
+    "nb_streams": 1,
+    "nb_programs": 0,
+    "nb_stream_groups": 0,
+    "format_name": "wav",
+    "format_long_name": "WAV / WAVE (Waveform Audio)",
+    "duration": "19.097959",
+    "size": "842264",
+    "bit_rate": "352818",
+    "probe_score": 99
+  }
+}

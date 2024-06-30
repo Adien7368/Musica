@@ -1,0 +1,14 @@
+{
+  "format": {
+    "filename": "./wave-files/taunt.wav",
+    "nb_streams": 1,
+    "nb_programs": 0,
+    "nb_stream_groups": 0,
+    "format_name": "wav",
+    "format_long_name": "WAV / WAVE (Waveform Audio)",
+    "duration": "4.099384",
+    "size": "91284",
+    "bit_rate": "178141",
+    "probe_score": 99
+  }
+}

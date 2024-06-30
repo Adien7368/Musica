@@ -1,0 +1,14 @@
+{
+  "format": {
+    "filename": "./wave-files/StarWars60.wav",
+    "nb_streams": 1,
+    "nb_programs": 0,
+    "nb_stream_groups": 0,
+    "format_name": "wav",
+    "format_long_name": "WAV / WAVE (Waveform Audio)",
+    "duration": "60.000000",
+    "size": "2646044",
+    "bit_rate": "352805",
+    "probe_score": 99
+  }
+}
