@@ -32,6 +32,8 @@ export default {
       outName: "musica"
       
     }),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template : "./static/index.html"
+    })
   ]
 };
