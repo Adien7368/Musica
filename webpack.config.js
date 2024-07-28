@@ -1,39 +1,48 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
+const path = require("path");
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-import WasmPackPlugin from "@wasm-tool/wasm-pack-plugin";
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const dist = path.resolve(__dirname, "dist");
 
-export default {
-  mode: "production",
+module.exports = {
   entry: {
-    index: "./app/index.tsx"
+    index: "./app/index.tsx",
   },
   output: {
     path: dist,
-    filename: "[name].js"
+    filename: "[name].js",
   },
   devServer: {
     static: {
-      directory: dist
-    }
+      directory: dist,
+    },
   },
-  experiments: {asyncWebAssembly: true},
-
+  experiments: { asyncWebAssembly: true },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
+  },
   plugins: [
     new WasmPackPlugin({
-      crateDirectory: path.resolve(__dirname,"wave-parser"),
-      outDir: path.resolve(__dirname,"pkg"),
-      outName: "musica"
-      
+      crateDirectory: path.resolve(__dirname, "wave-parser"),
+      outDir: path.resolve(__dirname, "pkg"),
+      outName: "musica",
     }),
     new HtmlWebpackPlugin({
-      template : "./static/index.html"
-    })
-  ]
+      template: "./static/index.html",
+    }),
+  ],
 };
